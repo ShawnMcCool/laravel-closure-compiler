@@ -10,7 +10,7 @@ A Laravel [Closure Compiler](https://developers.google.com/closure/compiler/) bu
 
 This bundle automatically minifies a site's JavaScript files and updates them only when necessary.  List your site's JavaScript files in a config file and when a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last minification.  If so, it'll minify immediately and keep itself up to date.  The developer or designer would then simply commit their code into their repository as normal including the minified file.  In production the minification system is never loaded.  The site's layout view should link to the minified file instead of to each of the JavaScript files as their contents are all minified together into the singular output file.
 
-### Bundle Registration
+### 1. Bundle Registration
 
 Add 'closure-compiler' to your **application/bundles.php** file:
 
@@ -18,7 +18,7 @@ Add 'closure-compiler' to your **application/bundles.php** file:
         'closure-compiler'
     );
 
-### Configuration
+### 2. Configuration
 
 In the bundle's config file simply verify that your script path (the location in which your javascript files reside) and that your script_output_file is defined. The script_output_file will contain the resulting minified JavaScript.
 
@@ -32,7 +32,7 @@ Then, add the JavaScript files that you'd like to be minified to the 'minify_scr
 
 This bundle assumes that the Java binary is available and already in your PATH.  This is almost always the case.  If --for whatever reason-- you need to specify the absolute path to the binary, you can do so in the java_binary_path_overrides array().  You can add as many paths as you'd like and may mix and match paths for different operating systems.  Invalid paths will simply be ignored.
 
-### Triggering minification
+### 3. Triggering minification
 
 Add the minify command to a before filter.  This is something that should run before every page load.  Make sure that this only runs in the development environment and not in production.
 
@@ -49,7 +49,7 @@ Add the minify command to a before filter.  This is something that should run be
 
 **Note:** Your LARAVEL_ENV variable may be configured differently.  Please see the [http://laravel.com/docs/install#environments](Laravel Documentation on Environment) for more information.
 
-### Using the Minified Script
+### 4. Using the Minified Script
 
 Simply make a call to the minified .js file much like you would for any .js file.   No need to call any of the JavaScript files that you have minified.  They're all included in the output file.  It's very reasonable to minify all of your scripts and to only load script.min.js in your layout view.
 
