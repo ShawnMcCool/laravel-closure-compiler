@@ -28,10 +28,6 @@ return array(
         // included some examples, replace these with your own
         'libs/less-1.1.3.min.js',
         'libs/google-code-prettify/prettify.js',
-        'libs/jquery.fitvids.js',
-        'libs/jquery.fittext.js',
-        'bootstrap/bootstrap-dropdown.js',
-        'script.js'
     ),
 
     /*
