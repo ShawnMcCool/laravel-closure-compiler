@@ -8,7 +8,7 @@ A Laravel [Closure Compiler](https://developers.google.com/closure/compiler/) bu
 
 ### Description
 
-This bundle allows users to list their site's JavaScript files in a config file.  When a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last minification.  If so, it'll minify immediately and keep itself up to date.  The developer or designer would then simply commit their code into their repository as normal including the minified file.  In production the minification system is never loaded.  The site's layout view should link to the minified file instead of to each of the JavaScript files as their contents are all minified together into the singular output file.
+This bundle automatically minifies a site's JavaScript files and updates them only when necessary.  List your site's JavaScript files in a config file and when a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last minification.  If so, it'll minify immediately and keep itself up to date.  The developer or designer would then simply commit their code into their repository as normal including the minified file.  In production the minification system is never loaded.  The site's layout view should link to the minified file instead of to each of the JavaScript files as their contents are all minified together into the singular output file.
 
 ### Bundle Registration
 
@@ -47,9 +47,11 @@ Add the minify command to a before filter.  This is something that should run be
         }
     });
 
+**Note:** Your LARAVEL_ENV variable may be configured differently.  Please see the [http://laravel.com/docs/install#environments](Laravel Documentation on Environment) for more information.
+
 ### Using the Minified Script
 
-Simply make a call to the minified .js file much like you would for any .js file.   No need to call any of the JavaScript files that you have minified.  They're all included in the output file.  It's very reasonable to minified all of your scripts and to only load script.min.js in your view.
+Simply make a call to the minified .js file much like you would for any .js file.   No need to call any of the JavaScript files that you have minified.  They're all included in the output file.  It's very reasonable to minify all of your scripts and to only load script.min.js in your layout view.
 
 ### License
 
