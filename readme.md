@@ -6,6 +6,10 @@ A Laravel [Closure Compiler](https://developers.google.com/closure/compiler/) bu
 
 **Important:** Closure Compiler requires that Java is installed.  Consequently, it can run on virtually any operating system.
 
+### Description
+
+This bundle allows users to list their site's JavaScript files in a config file.  When a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last minification.  If so, it'll minify immediately and keep itself up to date.  The developer or designer would then simply commit their code into their repository as normal including the minified file.  In production the minification system is never loaded.  The site's layout view should link to the minified file instead of to each of the JavaScript files as their contents are all minified together into the singular output file.
+
 ### Bundle Registration
 
 Add 'closure-compiler' to your **application/bundles.php** file:
