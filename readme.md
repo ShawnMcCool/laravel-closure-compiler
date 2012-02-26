@@ -32,7 +32,7 @@ Then, add the JavaScript files that you'd like to be minified to the 'minify_scr
 
 This bundle assumes that the Java binary is available and already in your PATH.  This is almost always the case.  If --for whatever reason-- you need to specify the absolute path to the binary, you can do so in the java_binary_path_overrides array().  You can add as many paths as you'd like and may mix and match paths for different operating systems.  Invalid paths will simply be ignored.
 
-### 3. Triggering minification
+### 3. Triggering Minification
 
 Add the minify command to a before filter.  This is something that should run before every page load.  Make sure that this only runs in the development environment and not in production.
 
