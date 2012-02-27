@@ -55,6 +55,8 @@ Simply make a call to the minified .js file much like you would for any .js file
 
 ### License
 
-The Google Closure Compiler has been included in this package.  It is important to note that the Closure Compiler has been released under the Apache License, Version 2.0.
+The closure-compiler bundle is released under the MIT license.
+
+The Google Closure Compiler has been included in this package (in the vendor directory).  It is important to note that the Closure Compiler has been released under the Apache License, Version 2.0.
 
 More information can be found here: [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
