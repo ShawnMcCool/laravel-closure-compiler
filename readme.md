@@ -70,7 +70,7 @@ Once the monolithic JavaScript file (which contains the minified contents of man
 
 It's important to note that while you might be tempted to have separate minified JavaScript files for different pages in order to only include the necessary components, that should be avoided
 
-*Here is an example scenario to illustrate the point:*
+**Here is an example scenario to illustrate the point:**
 
 1. Load Home Page: jquery, jquery ui, home.js (250k compressed to 60k)
 2. Load Blog Page: jquery, jquery ui, blog.js (250k compressed to 60k)
@@ -79,29 +79,29 @@ One may be tempted to generate a home.min.js which contains only the files neces
 
 Let's take a look at a few scenarios to illustrate this point:
 
-*No Compression*
+**No Compression**
 1. Load Home Page: jquery, jquery ui, home.js (250k, uncompressed)
 2. Load Blog Page: jquery(cached), jquery ui(cached), blog.js (10k)
 
 You can see here that after the initial page load the primary components (jquery, jquery ui) are already loaded and cached.  They don't need to be downloaded by the browser again.  The browser would only need to download files that it hasn't already acquired.  In this scenario that is the 10k blog.js file.
 
-*Multiple Compressed Files*
+**Multiple Compressed Files**
 1. Load Home Page: jquery, jquery ui, home.js (60k compressed)
 2. Load Blog Page: jquery, jquery ui, blog.js (60k compressed, no cache used)
 
-Total download: _120k_
+Total download: **120k**
 
-*Single Compressed File*
+**Single Compressed File**
 1. Load Home Page: jquery, jquery ui, home.js, blog.js (70k compressed)
 2. Load Blog Page: jquery, jquery ui, home.js, blog.js (everything is already cached, no download necessary)
 
-Total download: [u]70k[/u]
+Total download: **70k**
 
 The optimal solution is to gather all of your common JavaScript files into a single minified file.  This file loads when someone first hits your site (or on the first page where JavaScript is used).  After this initial load there should be no further loads to JavaScript files.
 
 If you would like to include an additional bit of JavaScript that perhaps is only used on the admin page, simply make an additional script call.
 
-*Additional Scripts*
+**Additional Scripts**
 1. Load Home Page: jquery, jquery ui, home.js, blog.js (70k compressed)
 2. Load Admin Page: jquery, jquery ui, home.js, blog.js (cached), admin.js (5k)
 
