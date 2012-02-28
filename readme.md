@@ -25,7 +25,7 @@ Add 'closure-compiler' to your **application/bundles.php** file:
 
 ### 3. Bundle Configuration
 
-In the bundle's config file simply verify that your script path (the location in which your javascript files reside) and that your script_output_file is defined. The script_output_file is the file that contains the compressed JavaScript code from all files in the minify_scripts configuration array.
+In the bundle's config file simply verify that your script path (the location in which your JavaScript files reside) and that your script_output_file is defined. The script_output_file is the file that contains the compressed JavaScript code from all files in the minify_scripts configuration array.
 
 Then, add the JavaScript files that you'd like to be compressed to the 'minify_scripts' array.  An example:
 
