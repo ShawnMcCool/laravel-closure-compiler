@@ -1,4 +1,5 @@
 # Google Closure Compiler Bundle
+
 written for use with Laravel by Shawn McCool
 
 ## Description
