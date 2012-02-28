@@ -60,7 +60,7 @@ Add the minify command to a before filter.  This is something that should run be
 
 Simply make a call to the resulting .min.js file much like you would for any .js file.  You can do this manually in your layout view as shown above, or you can use the Laravel Asset library.  Do *not* add any of the JavaScript files that are inside your minify_javascript configuration array, they're all included in the output file.  It's very reasonable to minify all of your scripts and to only load script.min.js in your layout view.
 
-### Best-Practices
+## Best-Practices
 
 The purpose of minifying multiple files together is to reduce the number of JavaScript load calls that the browser makes.
 
@@ -111,7 +111,7 @@ If you would like to include an additional bit of JavaScript that perhaps is onl
 
 In this scenario the original compressed file is already cached by the browser and the user's browser would make a single additional call to download the admin.js file.  In this way your users are unaffected by the size of your admin JavaScript code.
 
-### License
+## License
 
 The closure-compiler bundle is released under the MIT license.
 
