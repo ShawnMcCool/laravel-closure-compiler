@@ -80,18 +80,21 @@ One may be tempted to generate a home.min.js which contains only the files neces
 Let's take a look at a few scenarios to illustrate this point:
 
 **No Compression**
+
 1. Load Home Page: jquery, jquery ui, home.js (250k, uncompressed)
 2. Load Blog Page: jquery(cached), jquery ui(cached), blog.js (10k)
 
 You can see here that after the initial page load the primary components (jquery, jquery ui) are already loaded and cached.  They don't need to be downloaded by the browser again.  The browser would only need to download files that it hasn't already acquired.  In this scenario that is the 10k blog.js file.
 
 **Multiple Compressed Files**
+
 1. Load Home Page: jquery, jquery ui, home.js (60k compressed)
 2. Load Blog Page: jquery, jquery ui, blog.js (60k compressed, no cache used)
 
 Total download: **120k**
 
 **Single Compressed File**
+
 1. Load Home Page: jquery, jquery ui, home.js, blog.js (70k compressed)
 2. Load Blog Page: jquery, jquery ui, home.js, blog.js (everything is already cached, no download necessary)
 
@@ -102,6 +105,7 @@ The optimal solution is to gather all of your common JavaScript files into a sin
 If you would like to include an additional bit of JavaScript that perhaps is only used on the admin page, simply make an additional script call.
 
 **Additional Scripts**
+
 1. Load Home Page: jquery, jquery ui, home.js, blog.js (70k compressed)
 2. Load Admin Page: jquery, jquery ui, home.js, blog.js (cached), admin.js (5k)
 
