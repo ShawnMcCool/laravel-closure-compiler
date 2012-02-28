@@ -1,11 +1,11 @@
 # Google Closure Compiler Bundle
 written for use with Laravel by Shawn McCool
 
-### Description
+## Description
 
 A Laravel [Closure Compiler](https://developers.google.com/closure/compiler/) bundle, installable via the Artisan CLI:
 
-This bundle automatically compressed a site's JavaScript files and updates them only when necessary.  List your site's JavaScript files in a config file and when a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last compression.  If so, it'll compress immediately and keep itself up to date.  The developer or designer would then commit their code into their repository as normal including the compressed JavaScript file.
+This bundle automatically compresses a site's JavaScript files and updates them only when necessary.  List your site's JavaScript files in a config file and when a site runs in the development environment it'll check to see if any of the JavaScript files have been updated since the last compression.  If so, it'll compress immediately and keep itself up to date.  The developer or designer would then commit their code into their repository as normal including the compressed JavaScript file.
 
 ## How to Use
 
