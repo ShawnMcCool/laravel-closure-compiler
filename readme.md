@@ -1,4 +1,5 @@
-# Google Closure Compiler Bundle, by Shawn McCool
+# Google Closure Compiler Bundle
+### by Shawn McCool
 
 A Laravel [Closure Compiler](https://developers.google.com/closure/compiler/) bundle, installable via the Artisan CLI:
 
