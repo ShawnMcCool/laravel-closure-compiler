@@ -119,3 +119,9 @@ The closure-compiler bundle is released under the MIT license.
 The Google Closure Compiler has been included in this package (in the vendor directory).  It is important to note that the Closure Compiler has been released under the Apache License, Version 2.0.
 
 More information can be found here: [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+### Troubleshooting
+
+**Problems running on OSX**
+
+It's possible that some OSX users will have problems running Java through the webserver in the way that this bundle does. If you're having this problem check here for a potential solution: http://stackoverflow.com/questions/7650013/java-1-6-broken-when-called-by-background-symfony-task/9791946#9791946
