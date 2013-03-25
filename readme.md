@@ -53,7 +53,7 @@ Add the minify command to a before filter.  This is something that should run be
         }
     });
 
-**Note:** Your LARAVEL_ENV variable may be configured differently.  Please see the [http://laravel.com/docs/install#environments](Laravel Documentation on Environment) for more information.
+**Note:** Your LARAVEL_ENV variable may be configured differently.  Please see the [Laravel Documentation on Environment](http://laravel.com/docs/install#environments) for more information.
 
 ### 5. Call the Compressed Script from your View
 
