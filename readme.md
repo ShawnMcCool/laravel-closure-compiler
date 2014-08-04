@@ -1,3 +1,5 @@
+> This repository is ancient and no longer maintained. Please do not use it. It may disappear at any point.
+
 # Google Closure Compiler Bundle
 
 written for use with Laravel by Shawn McCool
